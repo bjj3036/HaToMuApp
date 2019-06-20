@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <android.support.constraint.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="?attr/colorSurface"
+        tools:context=".activitys.EditPostActivity">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+
+            <android.support.design.widget.AppBarLayout
+                android:id="@+id/appBarLayout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:layout_constraintTop_toTopOf="parent">
+
+                <android.support.v7.widget.Toolbar
+                    android:id="@+id/toolbar"
+                    android:layout_width="match_parent"
+                    android:layout_height="?attr/actionBarSize"
+                    android:background="@color/colorPrimary"
+                    android:elevation="4dp"
+                    android:theme="@style/ThemeOverlay.AppCompat.ActionBar"
+                    app:title="글쓰기"
+                    app:titleTextColor="@color/colorOnPrimary" />
+
+            </android.support.design.widget.AppBarLayout>
+
+            <android.support.constraint.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <android.support.v7.widget.RecyclerView
+                    android:id="@+id/list_selectItem"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/size_selected_image"
+                    android:layout_marginStart="@dimen/size_padding"
+                    android:layout_marginTop="@dimen/size_padding_thin"
+                    android:layout_marginEnd="@dimen/size_padding"
+                    android:background="?attr/colorSurfaceVariant"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <ImageButton
+                    android:id="@+id/button_addImage"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/size_padding"
+                    android:layout_marginTop="@dimen/size_padding_thin"
+                    android:layout_marginEnd="@dimen/size_padding"
+                    android:background="@drawable/ripple_surface_variant"
+                    android:padding="@dimen/size_padding_thin_thin"
+                    android:src="@drawable/ic_baseline_add_to_photos_24px"
+                    app:layout_constraintTop_toBottomOf="@+id/list_selectItem" />
+
+                <EditText
+                    android:id="@+id/edit_content"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/size_padding"
+                    android:layout_marginTop="@dimen/size_padding_thin"
+                    android:layout_marginEnd="@dimen/size_padding"
+                    android:gravity="start|top"
+                    android:hint="@string/content_hint"
+                    android:textColor="?attr/colorOnSurface"
+                    android:textColorHint="?attr/colorOnSurfaceVariant"
+                    app:layout_constraintTop_toBottomOf="@+id/button_addImage" />
+            </android.support.constraint.ConstraintLayout>
+        </LinearLayout>
+        <RelativeLayout
+            android:id="@+id/layout_loading"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:visibility="gone"
+            android:background="#3FFF">
+
+            <ProgressBar
+                android:id="@+id/progressBar"
+                style="?android:attr/progressBarStyle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"/>
+        </RelativeLayout>
+    </android.support.constraint.ConstraintLayout>
+</layout>

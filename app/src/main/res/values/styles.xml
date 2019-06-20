@@ -1,0 +1,60 @@
+<resources>
+
+    <!-- Base application theme. -->
+    <style name="AppTheme" parent="Theme.AppCompat.Light.NoActionBar">
+        <!-- Customize your theme here. -->
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="colorAccent">@color/colorAccent</item>
+        <item name="actionMenuTextColor">@color/colorOnPrimary</item>
+        <item name="colorControlNormal">@color/colorOnPrimary</item>
+        <item name="homeAsUpIndicator">@drawable/ic_back</item>
+    </style>
+
+    <style name="GlitchBackgroundWhite">
+        <item name="android:background">@drawable/twitch_glitch_white</item>
+        <item name="android:layout_height">@dimen/size_postlogo</item>
+        <item name="android:layout_width">@dimen/size_postlogo</item>
+    </style>
+
+    <style name="GlitchBackgroundPurple">
+        <item name="android:background">@drawable/twitch_glitch_purple</item>
+        <item name="android:layout_height">@dimen/size_postlogo</item>
+        <item name="android:layout_width">@dimen/size_postlogo</item>
+    </style>
+
+    <style name="TextOnSurface">
+        <item name="android:textColor">?attr/colorOnSurface</item>
+    </style>
+
+    <style name="TextOnSurface.Bold">
+        <item name="android:textStyle">bold</item>
+    </style>
+
+    <style name="TextOnSurface.Light">
+        <item name="android:textSize">@dimen/size_text_small</item>
+    </style>
+
+    <style name="PostLogo">
+        <item name="android:layout_height">@dimen/size_postlogo</item>
+        <item name="android:layout_width">@dimen/size_postlogo</item>
+    </style>
+
+    <style name="AppTheme.White">
+        <item name="colorSurface">@color/colorSurfaceWhite</item>
+        <item name="colorSurfacePress">@color/colorSurfaceWhitePress</item>
+        <item name="colorSurfaceVariant">@color/colorSurfaceWhiteVariant</item>
+        <item name="colorOnSurface">@color/colorOnSurfaceWhite</item>
+        <item name="colorOnSurfaceVariant">@color/colorOnSurfaceWhiteVariant</item>
+        <item name="glitchOnSurface">@style/GlitchBackgroundPurple</item>
+    </style>
+
+    <style name="AppTheme.Dark">
+        <item name="colorSurface">@color/colorSurfaceDark</item>
+        <item name="colorSurfacePress">@color/colorSurfaceDarkPress</item>
+        <item name="colorSurfaceVariant">@color/colorSurfaceDarkVariant</item>
+        <item name="colorOnSurface">@color/colorOnSurfaceDark</item>
+        <item name="colorOnSurfaceVariant">@color/colorOnSurfaceDarkVariant</item>
+        <item name="glitchOnSurface">@style/GlitchBackgroundWhite</item>
+    </style>
+</resources>

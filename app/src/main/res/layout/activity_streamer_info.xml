@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context="kr.hs.dgsw.hatomuapp.activitys.StreamerInfoActivity">
+
+    <data>
+
+        <variable
+            name="user"
+            type="kr.hs.dgsw.hatomuapp.beans.UserBean" />
+    </data>
+
+    <android.support.design.widget.CoordinatorLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="?attr/colorSurface">
+
+        <android.support.design.widget.AppBarLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <android.support.design.widget.CollapsingToolbarLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:layout_scrollFlags="scroll|enterAlwaysCollapsed"
+                app:titleEnabled="false">
+
+                <android.support.constraint.ConstraintLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    app:layout_collapseMode="parallax"
+                    app:layout_collapseParallaxMultiplier="0.5">
+
+                    <ImageView
+                        android:id="@+id/img_profile_banner"
+                        android:layout_width="match_parent"
+                        android:layout_height="200dp"
+                        android:scaleType="centerCrop"
+                        app:bannerImageUrl="@{user.profileBanner}"
+                        app:layout_constraintTop_toTopOf="parent"
+                        tools:src="@drawable/default_profile_banner" />
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="200dp"
+                        android:background="@drawable/background_opacity"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <View
+                        android:id="@+id/layout_user_info"
+                        android:layout_width="match_parent"
+                        android:layout_height="100dp"
+                        android:background="?attr/colorSurfaceVariant"
+                        app:layout_constraintTop_toBottomOf="@+id/img_profile_banner" />
+
+                    <TextView
+                        android:id="@+id/textview_name"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="8dp"
+                        android:text="@{user.displayName}"
+                        android:textColor="?attr/colorOnSurface"
+                        android:textSize="@dimen/size_streamer_name"
+                        android:textStyle="bold"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/img_logo"
+                        tools:text="삐부" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@{user.description}"
+                        android:textColor="?attr/colorOnSurface"
+                        android:textSize="12sp"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/textview_name"
+                        tools:text="종합게임과 라디오를 합니당!방가방가루~" />
+
+                    <de.hdodenhof.circleimageview.CircleImageView
+                        android:id="@+id/img_logo"
+                        android:layout_width="80dp"
+                        android:layout_height="80dp"
+                        android:elevation="@dimen/height_elevation"
+                        app:civ_border_color="?attr/colorOnSurfaceVariant"
+                        app:civ_border_width="2dp"
+                        app:layout_constraintBottom_toTopOf="@+id/layout_user_info"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/img_profile_banner"
+                        app:profileImageUrl="@{user.logo}"
+                        tools:src="@drawable/user_profile" />
+
+                </android.support.constraint.ConstraintLayout>
+
+                <android.support.v7.widget.Toolbar
+                    android:id="@+id/toolbar"
+                    android:layout_width="match_parent"
+                    android:layout_height="?attr/actionBarSize"
+                    app:layout_collapseMode="pin" />
+
+            </android.support.design.widget.CollapsingToolbarLayout>
+        </android.support.design.widget.AppBarLayout>
+
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/rv_posts"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:scaleType="centerCrop"
+            app:layout_behavior="@string/appbar_scrolling_view_behavior"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:src="@drawable/default_profile_banner" />
+
+    </android.support.design.widget.CoordinatorLayout>
+</layout>

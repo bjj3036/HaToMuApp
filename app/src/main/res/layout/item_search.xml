@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+        <import type="android.view.View" />
+
+        <variable
+            name="user"
+            type="kr.hs.dgsw.hatomuapp.beans.UserBean" />
+
+        <variable
+            name="listener"
+            type="kr.hs.dgsw.hatomuapp.adapters.SearchAdapter.SearchItemClickListener" />
+    </data>
+
+    <android.support.constraint.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:background="?attr/colorSurfaceVariant"
+        android:onClick="@{v->listener.onSearchItemClick(v, user)}"
+        android:paddingStart="4dp">
+
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:id="@+id/img_logo"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:clickable="true"
+            android:onClick="@{v->listener.onSearchItemClick(v, user)}"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:profileImageUrl="@{user.logo}"
+            tools:src="@drawable/user_profile" />
+
+        <TextView
+            android:id="@+id/txt_display_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:onClick="@{v->listener.onSearchItemClick(v, user)}"
+            android:text="@{user.displayName}"
+            android:textColor="?attr/colorOnSurface"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toTopOf="@+id/txt_name"
+            app:layout_constraintStart_toEndOf="@+id/img_logo"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:text="배보" />
+
+        <TextView
+            android:id="@+id/txt_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:onClick="@{v->listener.onSearchItemClick(v, user)}"
+            android:text="@{user.name}"
+            android:textColor="?attr/colorOnSurface"
+            android:textSize="12dp"
+            android:visibility="@{user.displayName.equals(user.name)?View.GONE:View.VISIBLE}"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/img_logo"
+            app:layout_constraintTop_toBottomOf="@+id/txt_display_name"
+            tools:text="배보" />
+
+    </android.support.constraint.ConstraintLayout>
+</layout>

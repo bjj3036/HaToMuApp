@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="kr.hs.dgsw.hatomuapp">
+
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:largeHeap="true"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme.Dark"
+        android:usesCleartextTraffic="true">
+        <activity android:name=".activitys.PostViewActivity"></activity>
+        <activity android:name=".activitys.StreamerInfoActivity" />
+        <activity android:name=".activitys.TwitchLogoutActivity" />
+        <activity
+            android:name=".activitys.EditPostActivity"
+            android:parentActivityName=".activitys.MainActivity" />
+        <activity android:name=".activitys.SettingActivity" />
+        <activity android:name=".activitys.TestActivity">
+        </activity>
+        <activity android:name=".activitys.TwitchLoginActivity" />
+        <activity android:name=".activitys.MainActivity" />
+        <activity android:name=".activitys.LoginActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+    </application>
+
+</manifest>

@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#6441A5</color>
+    <color name="colorPrimaryDark">#4B367C</color>
+    <color name="colorAccent">#0E9BD8</color>
+    <color name="colorAccentDark">#0E72D8</color>
+    <color name="colorSurfaceWhite">#FAF9FA</color>
+    <color name="colorSurfaceWhiteVariant">#FFFFFF</color>
+    <color name="colorSurfaceWhitePress">#CCCCCC</color>
+    <color name="colorSurfaceDark">#0F0E11</color>
+    <color name="colorSurfaceDarkVariant">#19171C</color>
+    <color name="colorSurfaceDarkPress">#3f3d43</color>
+
+    <color name="colorOnPrimary">#ffffff</color>
+    <color name="colorOnSurfaceWhite">#19171c</color>
+    <color name="colorOnSurfaceWhiteVariant">#39373c</color>
+    <color name="colorOnSurfaceDark">#dad8de</color>
+    <color name="colorOnSurfaceDarkVariant">#faf8fe</color>
+
+    <color name="colorCaution"></color>
+</resources>

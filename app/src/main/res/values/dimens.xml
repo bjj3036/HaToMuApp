@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    //TextSize
+    <dimen name="size_postdisplayname">16sp</dimen>
+
+    //Other Size
+    <dimen name="size_postlogo">30dp</dimen>
+    <dimen name="size_padding">16dp</dimen>
+    <dimen name="size_padding_thin">12dp</dimen>
+    <dimen name="size_padding_thin_thin">8dp</dimen>
+    <dimen name="size_like_width">38dp</dimen>
+
+    <dimen name="size_text_small">12dp</dimen>
+    <dimen name="size_selected_image">100dp</dimen>
+
+    <dimen name="height_elevation">4dp</dimen>
+
+    <dimen name="size_streamer_name">20sp</dimen>
+
+</resources>
